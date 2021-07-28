@@ -64,11 +64,11 @@ ROOT_URLCONF = 'storefront.urls'
 
 TEMPLATES = [
         {
-                'BACKEND': 'django.template.backends.django.DjangoTemplates',
-                'DIRS': [BASE_DIR / 'templates']
+                'BACKEND' : 'django.template.backends.django.DjangoTemplates',
+                'DIRS'    : [BASE_DIR / 'templates']
                 ,
                 'APP_DIRS': True,
-                'OPTIONS': {
+                'OPTIONS' : {
                         'context_processors': [
                                 'django.template.context_processors.debug',
                                 'django.template.context_processors.request',
@@ -86,8 +86,11 @@ WSGI_APPLICATION = 'storefront.wsgi.application'
 
 DATABASES = {
         'default': {
-                'ENGINE': 'django.db.backends.sqlite3',
-                'NAME': BASE_DIR / 'db.sqlite3',
+                'ENGINE'  : 'django.db.backends.mysql',
+                'NAME'    : 'storefront',
+                'HOST'    : 'localhost',
+                'USER'    : 'root',
+                'PASSWORD': 'MahdiRanjbar_79'
         }
 }
 
